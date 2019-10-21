@@ -1,0 +1,54 @@
+[debug] [2019-10-01T16:44:30.547Z] ----------------------------------------------------------------------
+[debug] [2019-10-01T16:44:30.549Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init functions
+[debug] [2019-10-01T16:44:30.549Z] CLI Version:   6.10.0
+[debug] [2019-10-01T16:44:30.549Z] Platform:      darwin
+[debug] [2019-10-01T16:44:30.549Z] Node Version:  v10.15.2
+[debug] [2019-10-01T16:44:30.550Z] Time:          Tue Oct 01 2019 19:44:30 GMT+0300 (Eastern European Summer Time)
+[debug] [2019-10-01T16:44:30.550Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-10-01T16:44:30.558Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-10-01T16:44:30.558Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/trumpa/Nextcloud/projects/WebstormProjects/projektavimas
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2019-10-01T16:44:30.564Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects?page_size=100  
+ 
+[debug] [2019-10-01T16:44:31.238Z] <<< HTTP RESPONSE 200
+[info] i  Using project stps-bb2b0 (stps)
+[info] 
+=== Functions Setup
+[info] 
+[info] A functions directory will be created in your project with a Node.js
+[info] package pre-configured. Functions can be deployed with firebase deploy.
+[info] 
+[debug] [2019-10-01T16:44:33.434Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-10-01T16:44:33.435Z] > authorizing via signed-in user
+[debug] [2019-10-01T16:44:33.435Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/stps-bb2b0  
+ 
+[debug] [2019-10-01T16:44:34.100Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-01T16:44:34.102Z] >>> HTTP REQUEST PATCH https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/stps-bb2b0?updateMask=usageSettings  
+
+[debug] [2019-10-01T16:44:34.103Z] >>> HTTP REQUEST PATCH https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/stps-bb2b0?updateMask=usageSettings  
+
+[debug] [2019-10-01T16:44:35.941Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-01T16:44:35.975Z] <<< HTTP RESPONSE 200
+[info] ✔  Wrote functions/package.json
+[info] ✔  Wrote functions/tslint.json
+[info] ✔  Wrote functions/tsconfig.json
+[info] ✔  Wrote functions/src/index.ts
+[info] ✔  Wrote functions/.gitignore
