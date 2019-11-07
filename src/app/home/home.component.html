@@ -1,1 +1,49 @@
-<p>home works!</p>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>STPS chat</span>
+    <span class="example-fill-remaining-space"></span>
+    <div *ngIf="auth.user$ | async as user; then loggedIn; else loggedOut">>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="docs-app-background" class="login">
+  <div *ngIf=" auth.user$ | async as user; else background">
+    <img [src]="user.photoURL" width="50px">
+    <p>
+      <span class="tag is-dark">{{ user.displayName }}</span>
+      <span class="tag is-light">{{ user.uid }}</span>
+    </p>
+    <hr>
+
+    <button class="button" routerLink="/chats/UJrR0M10IK7VJDVCQIKF">Join Mega Chat 🎪</button>
+    <button class="button is-info" (click)="cs.create()">Create New Chat</button>
+
+    <hr>
+
+    <h3>My Chats</h3>
+
+    <ul>
+      <li *ngFor="let chat of userChats$ | async">
+        <a [routerLink]="'chats/' + chat.id">{{ chat.id }} - {{ chat.messages.length }} Messages </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<ng-template #background>
+  <div class="animation-background">
+    <div id="particles-js"></div>
+    <div id="particles-js2"></div>
+    <div id="particles-js3"></div>
+
+  </div>
+</ng-template>
+<ng-template #loggedIn>
+  <button mat-button (click)="auth.signOut()">Sign Out</button>
+</ng-template>
+<ng-template #loggedOut>
+  <button mat-button [matMenuTriggerFor]="menu">Log In</button>
+  <mat-menu #menu="matMenu">
+    <button (click)="auth.googleSignIn()" mat-menu-item>Google</button>
+  </mat-menu>
+</ng-template>
